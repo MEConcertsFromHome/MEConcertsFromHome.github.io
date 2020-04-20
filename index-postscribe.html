@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+    <title>Embedding a Genius page</title>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"></script>
+</head>
+<body>
+<div id="myDiv"> 
+<!--    <object width="800px" height="600px" style="overflow:auto;border:5px ridge blue">-->
+<object id="rg_embed_link_1019977" class="rg_embed_link" data-song-id="1019976" style="display: none">Read <a href="https://genius.com/Melissa-etheridge-occasionally-lyrics">“Occasionally” by Melissa Etheridge</a> on Genius
+    </object>
+<!--    if (r = v(".rg_embed_link[id]").attr("id"))-->
+ </div>
+ <script crossorigin src="//genius.com/songs/1019977/embed.js"></script>
+ <div style="display: none;">
+<!--<script type="text/javascript">
+  postscribe('#mydiv', '<script crossorigin src="//genius.com/songs/1019976/embed.js"><\/script>');
+</script>-->
+<!--<div id="mydiv">
+<div id="rg_embed_link_1019976" class="rg_embed_link" data-song-id="1019976">Read <a href="https://genius.com/Melissa-etheridge-occasionally-lyrics">“Occasionally” by Melissa Etheridge</a> on Genius</div>
+</div>
+<a href="javascript:getSong()">Get the lyrics.</a>
+<script type="text/javascript">
+    function getSong() {
+  postscribe('#mydiv', '<script crossorigin src="//genius.com/songs/1019976/embed.js"><\/script>');
+    }
+</script>
+--></div>
+
+    <script>
+        /*, r = v(".rg_embed_link").attr("data-song-id");
+    if (!r)
+        if (r = v(".rg_embed_link[id]").attr("id"))
+            r = r.split("_").pop();
+        else
+            throw new m("Unable to find ID for Genius embed. Check your embed code or try recopying it from genius.com.");*/
+ </script>
+</body>
