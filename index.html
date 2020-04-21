@@ -538,7 +538,8 @@
     const _URL_VIDEOS = 0;
     const _DAY_VIDEOS = 1;
     const _DATE_VIDEOS = 2;
-    const _DESCRIPTION_VIDEOS = 3;
+    const _START_TIME_VIDEOS = 3;
+    const _DESCRIPTION_VIDEOS = 4;
     day = 1;
     do {
         var daySong = [];
@@ -688,13 +689,18 @@
         var id = videoID.split("-");
         var dayNum = parseInt(id[1]);
         if (id[0] == "Video") {
-            srcStr = videos[dayNum - 1][0]+'?autoplay=1';
+            startTime = TimeToSec(videos[dayNum-1][_START_TIME_VIDEOS]);
+//            endTime = TimeToSec(videos[dayNum-1][_END_TIME_VIDEOS]);
+//            console.log('DAY: start at ' +startTime+ ' and ending at '+endTime);
+            srcStr = videos[dayNum - 1][0] + '?start=' +startTime+ '&autoplay=1';
+//            srcStr = videos[dayNum - 1][0] + '?start=1&autoplay=1';
             headerText = "Day " + dayNum;
         } else {
             songNum = parseInt(id[3]);
 
             startTime = TimeToSec(songs[songNum][dayToColumn(dayNum)]);
             endTime = TimeToSec(songs[songNum][dayToColumn(dayNum) + 1]);
+            console.log('SONG: start at ' +startTime+ ' and ending at '+endTime);
             srcStr = videos[dayNum - 1][0] + '?start=' + startTime + '&end=' + endTime+'&autoplay=1';
 
             if (id[0] == "Song") {
