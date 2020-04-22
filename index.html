@@ -549,12 +549,11 @@
         var daySong = [];
 
         var $outerDiv = $('<div id="Day' +day+ '" class="row">');
-        var $dayDiv = $('<div class="col-2 col-4-medium col-6-small day">');
+        var $dayDiv = $('<div class="col-3 col-6-medium col-6-small day">');
 
         $('#byDay').append($outerDiv);
         $outerDiv.append($dayDiv);
         $dayDiv.append('<p>' +convertDateFormat(videos[day-1][_DATE_VIDEOS])+ '</p><div id="Video-' +day+ '-1" class="imageContainer video"><picture><source srcset="/images/Days/WEBP/Day%20' +day+ '.webp 1x, /images/Days/WEBP/Day%20' +day+ '-big.webp 2x" type="image/webp"><source srcset="/images/Days/PNG/Day%20' +day+ '.png 1x, /images/Days/PNG/Day%20' +day+ '-big.png 2x" type="image/png"><img src="/images/Day%20' +day+ '.png"></picture></div>');
-//<img src="images/Days/' +videos[day-1][_DAY_VIDEOS]+ '.webp" alt="" /></div>');
         
         if (videos[day-1][_DESCRIPTION_VIDEOS].length > 0) {
             $dayDiv.append('<p class="description">' +videos[day-1][_DESCRIPTION_VIDEOS]+ '</p>');
@@ -576,14 +575,15 @@
 
         daySong.sort();
 
+        var $songDiv = $('<div class="col-9 trackList">');
+        $outerDiv.append($songDiv);
+        
         if (daySong.length > 0) {
             i = 0
             do {
                 daySongNum = daySong[i].split('|');
-                var $songDiv = $('<div class="col-2 col-4-medium col-6-small song">');
-                $outerDiv.append($songDiv);
                 
-                $songDiv.append('<div id="Song-' + day + '-' + (i + 1) + '-' + daySongNum[1] + '" class="video"><p class="link" title="'+displayAlbum(daySongNum[1])+'">' + songs[daySongNum[1]][SONG] + '</p>');
+                $songDiv.append('<div class="trackItem"><div id="Song-' + day + '-' + (i + 1) + '-' + daySongNum[1] + '" class="trackName link video"><div title="'+displayAlbum(daySongNum[1])+'">' + songs[daySongNum[1]][SONG] + '</div></div>');
                 i++;
             } while (i < daySong.length);
         }
@@ -695,17 +695,13 @@
         var dayNum = parseInt(id[1]);
         if (id[0] == "Video") {
             startTime = TimeToSec(videos[dayNum-1][_START_TIME_VIDEOS]);
-//            endTime = TimeToSec(videos[dayNum-1][_END_TIME_VIDEOS]);
-//            console.log('DAY: start at ' +startTime+ ' and ending at '+endTime);
             srcStr = videos[dayNum - 1][0] + '?start=' +startTime+ '&autoplay=1';
-//            srcStr = videos[dayNum - 1][0] + '?start=1&autoplay=1';
             headerText = "Day " + dayNum;
         } else {
             songNum = parseInt(id[3]);
 
             startTime = TimeToSec(songs[songNum][dayToColumn(dayNum)]);
             endTime = TimeToSec(songs[songNum][dayToColumn(dayNum) + 1]);
-            console.log('SONG: start at ' +startTime+ ' and ending at '+endTime);
             srcStr = videos[dayNum - 1][0] + '?start=' + startTime + '&end=' + endTime+'&autoplay=1';
 
             if (id[0] == "Song") {
