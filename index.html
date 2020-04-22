@@ -334,6 +334,10 @@
             color:white;
             font-weight: 500;
         }
+        
+        .description {
+            font-size: 12px;
+        }
     </style>
     <script>
         var $runLocal = true;
@@ -549,10 +553,11 @@
 
         $('#byDay').append($outerDiv);
         $outerDiv.append($dayDiv);
-        $dayDiv.append('<p>' +convertDateFormat(videos[day-1][_DATE_VIDEOS])+ '</p><div id="Video-' +day+ '-1" class="imageContainer video"><img src="images/Days/' +videos[day-1][_DAY_VIDEOS]+ '.webp" alt="" /></div>');
+        $dayDiv.append('<p>' +convertDateFormat(videos[day-1][_DATE_VIDEOS])+ '</p><div id="Video-' +day+ '-1" class="imageContainer video"><picture><source srcset="/images/Days/WEBP/Day%20' +day+ '.webp 1x, /images/Days/WEBP/Day%20' +day+ '-big.webp 2x" type="image/webp"><source srcset="/images/Days/PNG/Day%20' +day+ '.png 1x, /images/Days/PNG/Day%20' +day+ '-big.png 2x" type="image/png"><img src="/images/Day%20' +day+ '.png"></picture></div>');
+//<img src="images/Days/' +videos[day-1][_DAY_VIDEOS]+ '.webp" alt="" /></div>');
         
         if (videos[day-1][_DESCRIPTION_VIDEOS].length > 0) {
-            $dayDiv.append('<p>' +videos[day-1][_DESCRIPTION_VIDEOS]+ '</p>');
+            $dayDiv.append('<p class="description">' +videos[day-1][_DESCRIPTION_VIDEOS]+ '</p>');
         }
         
         $dayDiv.append('<div id="Video-' +day+ '-2" class="buttonContainer video"><button class="alt small">Play ' +videos[day-1][_DAY_VIDEOS]+ '</button></div>');

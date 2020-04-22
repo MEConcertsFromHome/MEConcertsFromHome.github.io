@@ -244,6 +244,11 @@ var videos = [
 	,["https://www.youtube.com/embed/uQJVj5nMRtM","Day 30","04/14/2020","00:01","Day 30"]
 	,["https://www.youtube.com/embed/GT3zNrUETts","Day 31","04/15/2020","00:01","Day 31"]
 	,["https://www.youtube.com/embed/xxap6edNBUw","Day 32","04/16/2020","09:33","Day 32"]
+//	,["https://www.youtube.com/embed/","Day 33","04/17/2020","00:01","Day 33"]
+//	,["https://www.youtube.com/embed/","Day 34","04/18/2020","00:01","Day 34"]
+//	,["https://www.youtube.com/embed/","Day 35","04/19/2020","00:01","Day 35"]
+//	,["https://www.youtube.com/embed/","Day 36","04/20/2020","00:01","Day 36"]
+//	,["https://www.youtube.com/embed/","Day 37","04/21/2020","00:01","Tribute to Prince (Kiss) during 4th song"]
 ];
 
 var albums = [
