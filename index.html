@@ -501,7 +501,6 @@
 
     function convertFileDate(dateString) {
         var date = new Date(2020, parseInt(dateString.substr(0,2))-1,parseInt(dateString.substr(3,2)));
-//        result = date.toLocaleString('default', {day: 'numeric', month: 'long'});
         result = date.toLocaleString('default', {weekday: 'short', month: 'short', day: 'numeric'});
         return result;
     }
@@ -598,7 +597,6 @@
     var $dateDiv;
     var currentAlbum = "";
     song = 0;
-    album = 0;
     album = 1;
     do {
         if (currentAlbum != songs[song][ALBUM]) {
@@ -608,13 +606,13 @@
             var $albumDiv = $('<div class="col-3 col-6-medium col-6-small album">');
             $outerDiv.append($albumDiv);
             
-            $albumDiv.append('<p>' + songs[song][ALBUM] + '</p><div id="Album-' + (album+1) + '" class="imageContainer"><img src="images/Albums/' + songs[song][ALBUM] + '.jpg" alt="' + songs[song][ALBUM] + '" />');
             $albumDiv.append('<p>' +songs[song][ALBUM]+ '</p><div id="Album-' +album+ '" class="imageContainer"><img src="images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg" alt="' + songs[song][ALBUM] + '" />');
         
             var $songsDiv = $('<div class="col-9 trackList">');
             $outerDiv.append($songsDiv);
             
             currentAlbum = songs[song][ALBUM];
+            album++;
         }
         
         var $track = $('<div class="trackItem">');
