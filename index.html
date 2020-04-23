@@ -599,6 +599,7 @@
     var currentAlbum = "";
     song = 0;
     album = 0;
+    album = 1;
     do {
         if (currentAlbum != songs[song][ALBUM]) {
             var $outerDiv = $('<div class="row">');
@@ -608,6 +609,7 @@
             $outerDiv.append($albumDiv);
             
             $albumDiv.append('<p>' + songs[song][ALBUM] + '</p><div id="Album-' + (album+1) + '" class="imageContainer"><img src="images/Albums/' + songs[song][ALBUM] + '.jpg" alt="' + songs[song][ALBUM] + '" />');
+            $albumDiv.append('<p>' +songs[song][ALBUM]+ '</p><div id="Album-' +album+ '" class="imageContainer"><img src="images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg" alt="' + songs[song][ALBUM] + '" />');
         
             var $songsDiv = $('<div class="col-9 trackList">');
             $outerDiv.append($songsDiv);

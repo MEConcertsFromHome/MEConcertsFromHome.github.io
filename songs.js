@@ -255,20 +255,3 @@ var videos = [
 	,["https://www.youtube.com/embed/","Day 36","04/20/2020","00:01","Day 36"]
 //	,["https://www.youtube.com/embed/","Day 37","04/21/2020","00:01","Tribute to Prince (Kiss) during 4th song"]
 ];
-
-var albums = [
-    "Melissa Etheridge", 
-    "Brave and Crazy",
-    "Never Enough",
-    "Yes I Am",
-    "Your Little Secret",
-    "Breakdown",
-    "Skin",
-    "Lucky",
-    "The Awakening",
-    "A New Thought for Christmas",
-    "Fearless Love",
-    "4th Street Feeling",
-    "This Is M.E.",
-    "MEmphis Rock and Soul",
-    "The Medicine Show"];
