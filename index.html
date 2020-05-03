@@ -534,13 +534,15 @@
             album = "This is a single";
         } else if (songs[song][ALBUM] == "Covers") {
             album = "This is a cover";
+        } else if (songs[song][ALBUM] == "On Soundtracks") {
+            album = "From the named soundtrack";
         } else {
             album = "from the " + songs[song][ALBUM] + " album";
         }
         
         return album;
     }
-
+    
     const _URL_VIDEOS = 0;
     const _DAY_VIDEOS = 1;
     const _DATE_VIDEOS = 2;
@@ -576,7 +578,7 @@
         } while (song < songs.length);
 
         daySong.sort();
-
+        
         var $songDiv = $('<div class="col-9 trackList">');
         $outerDiv.append($songDiv);
         
@@ -585,7 +587,7 @@
             do {
                 daySongNum = daySong[i].split('|');
                 
-                $songDiv.append('<div class="trackItem"><div id="Song-' + day + '-' + (i + 1) + '-' + daySongNum[1] + '" class="trackName link video"><div title="'+displayAlbum(daySongNum[1])+'">' + songs[daySongNum[1]][SONG] + '</div></div>');
+                $songDiv.append('<div class="trackItem"><div id="Song-' + day + '-' + (i + 1) + '-' + daySongNum[1] + '" class="trackName link video"><div title="'+displayAlbum(daySongNum[1])+'">' +songs[daySongNum[1]][SONG]+ '</div></div>');
                 i++;
             } while (i < daySong.length);
         }
@@ -622,7 +624,7 @@
         $songsDiv.append($track);
 
         var $trackName = $('<div class="trackName">');
-        $trackName.append('<div>'+songs[song][SONG]+'</div>');
+        $trackName.append('<div>' +songs[song][SONG]+ '</div>');
         $track.append($trackName);
         
         day = 1;
