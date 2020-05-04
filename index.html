@@ -595,7 +595,13 @@
             
             $albumDiv.append('<p>' +songs[song][ALBUM]+ '</p><div id="Album-' +album+ '" class="imageContainer"><img src="images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg" alt="' + songs[song][ALBUM] + '" />');
         
-            console.log('The album image: images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg');
+            var albumOut = 'images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg';
+            
+            console.log('The album image: ' +albumOut);
+            
+            for (var x = 0, c=''; c = albumOut.charAt(x); x++) {
+                console.log('char ' +c+ ' (' +c.charCodeAt()+ ')'); 
+            }
             
             var $songsDiv = $('<div class="col-9 trackList">');
             $outerDiv.append($songsDiv);
