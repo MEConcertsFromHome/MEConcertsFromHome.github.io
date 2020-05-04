@@ -346,9 +346,6 @@
             font-size: 12px;
         }
     </style>
-    <script>
-        var $runLocal = true;
-    </script>
 </head>
 
 <body class="homepage is-preload">
@@ -483,6 +480,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="songs.js"></script>
+    <script src="videos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"></script>
 </body></html>
 
@@ -491,8 +489,6 @@
     const ALBUM = 0;
     const SONG = 1;
     const ID = 2;
-    const _DATEROW = 0;
-    const BEGIN = new Date(2020, 2, 16)
 
     var numberOfDays = (songs[0].length - 3) / 3;
 
@@ -507,28 +503,9 @@
         return (parseInt(minutes, 10) * 60) + parseInt(seconds, 10);
     }
 
-    function convertFileDate(dateString) {
-        var date = new Date(2020, parseInt(dateString.substr(0,2))-1,parseInt(dateString.substr(3,2)));
-        result = date.toLocaleString('default', {weekday: 'short', month: 'short', day: 'numeric'});
-        return result;
-    }
-    
     function convertDateFormat(inDate) {
         var date = new Date(inDate);
         result = date.toLocaleString('default', {weekday: 'short', month: 'short', day: 'numeric'});
-        return result;
-    }
-    
-    function getDateFromDay(days) {
-        var date = new Date(BEGIN); 
-        date.setDate(date.getDate() + days);
-        result = date.toLocaleString('default', {weekday: 'short', month: 'short', day: 'numeric'});
-        return result;
-    }
-    
-    function addDays(date, days) {
-        var result = new Date(date);
-        result.setDate(result.getDate() + days);
         return result;
     }
     
@@ -618,6 +595,8 @@
             
             $albumDiv.append('<p>' +songs[song][ALBUM]+ '</p><div id="Album-' +album+ '" class="imageContainer"><img src="images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg" alt="' + songs[song][ALBUM] + '" />');
         
+            console.log('The album image: images/Albums/' +encodeURIComponent(songs[song][ALBUM].trim()) + '.jpg');
+            
             var $songsDiv = $('<div class="col-9 trackList">');
             $outerDiv.append($songsDiv);
             
@@ -705,7 +684,7 @@
         var dayNum = parseInt(id[1]);
         if (id[0] == "Video") {
             startTime = TimeToSec(videos[dayNum-1][_START_TIME_VIDEOS]);
-            srcStr = videos[dayNum - 1][0] + '?start=' +startTime+ '&autoplay=1';
+            srcStr = videos[dayNum - 1][_URL_VIDEOS] + '?start=' +startTime+ '&autoplay=1';
             headerText = "Day " + dayNum;
         } else {
             songNum = parseInt(id[3]);
@@ -735,13 +714,7 @@
         var $video = $('<video id="videoPlaying" src="'+srcStr+'" controls>');
         //$video.autoplay = true;
 
-        if (videos[dayNum - 1][1] == "landscape") {
-            $video.width(640);
-        } else {
-            $video.width(360);
-        }
-
-        $videoDiv.append('<iframe width="420" height="345" src="'+srcStr+'" allow="autoplay"></iframe>');
+        $videoDiv.append('<iframe width="420" height="345" src="'+srcStr+'" allow="autoplay" allowfullscreen></iframe>');
 
         $container.fadeIn('1000'); // Show the overlay
         $video.fadeIn('1000');
