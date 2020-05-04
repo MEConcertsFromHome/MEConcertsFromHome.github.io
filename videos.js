@@ -39,11 +39,11 @@ var videos = [
 	,["https://www.youtube.com/embed/N5ZaHbKx8zc","Day 38","04/22/2020","00:01",""]
     
     
-	,["https://www.youtube.com/embed/775L7BebPUU","Day 39","04/23/2020","00:01","Day 39"]
-	,["https://www.youtube.com/embed/nBdlJtTsJXQ","Day 40","04/24/2020","00:01","Day 40"]
-	,["https://www.youtube.com/embed/ctODCfZLRO4","Day 41","04/25/2020","10:00","Day 41"]
+	,["https://www.youtube.com/embed/775L7BebPUU","Day 39","04/23/2020","00:01","Story time: The Travels of Monarch X by Ross E. Hutchins"]
+	,["https://www.youtube.com/embed/nBdlJtTsJXQ","Day 40","04/24/2020","00:01","Bruce Springsteen Day"]
 
     
+//	,["https://www.youtube.com/embed/ctODCfZLRO4","Day 41","04/25/2020","10:00","Day 41"]
 //    ,["https://www.youtube.com/embed/Jfkf6cwmlp8","Day 42","04/26/2020","00:01","Memorial for the Nova Scotia tragedy<br>Also, for survivors of the Parkland shotting"]
 //	,["https://www.youtube.com/embed/ei_CqVoC9K0","Day 43","04/27/2020","00:01","Day 43"]
 //	,["https://www.youtube.com/embed/G5LqmXESHzE","Day 44","04/28/2020","00:01","Day 44"]
