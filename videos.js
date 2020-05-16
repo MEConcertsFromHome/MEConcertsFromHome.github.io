@@ -39,9 +39,6 @@ var videos = [
 	,["https://www.youtube.com/embed/N5ZaHbKx8zc","Day 38","04/22/2020","00:01",""]
     ,["https://www.youtube.com/embed/775L7BebPUU","Day 39","04/23/2020","00:01","Story time: The Travels of Monarch X by Ross E. Hutchins"]
 	,["https://www.youtube.com/embed/nBdlJtTsJXQ","Day 40","04/24/2020","00:01","Bruce Springsteen Day"]
-// END OF DELIVERED
-    
-// FINISHED PROCESSING - HOLDING LOCALLY
     ,["https://www.youtube.com/embed/ctODCfZLRO4","Day 41","04/25/2020","10:00","Daughter Duet Day III"]
     ,["https://www.youtube.com/embed/Jfkf6cwmlp8","Day 42","04/26/2020","00:01","Piano Day<br>Memorial for the Nova Scotia tragedy, and for survivors of the Parkland shooting"]
 	,["https://www.youtube.com/embed/ei_CqVoC9K0","Day 43","04/27/2020","00:01",""]
@@ -50,17 +47,50 @@ var videos = [
 	,["https://www.youtube.com/embed/1o68sSNjesc","Day 46","04/30/2020","00:01","Coffee with Linda I"]
 	,["https://www.youtube.com/embed/q_aEn0UdBkU","Day 47","05/01/2020","00:01","Make Up Song Day"]
 	,["https://www.youtube.com/embed/yR-QuJ5x_4o","Day 48","05/02/2020","00:01",""]
-    
-// IN PROGRESS - SHOWING LOCALLY
 	,["https://www.youtube.com/embed/YzHUOQDoB8M","Day 49","05/03/2020","00:01","Piano Day<br>The Eagles Day<br>&#34;All the best songs are about girls. You can quote me.&#34;"]
 	,["https://www.youtube.com/embed/ADmqkAf6qvQ","Day 50","05/04/2020","00:01","Day 50: The Half-century"]
+// END OF DELIVERED
+    
+// FINISHED PROCESSING - HOLDING LOCALLY
+	,["https://www.youtube.com/embed/eF8Pl0QCoo0","Day 51","05/05/2020","00:01","&#34;We were thinking, maybe 'Biscotti'&#34;"]
+	,["https://www.youtube.com/embed/aK51-twezOs","Day 52","05/06/2020","00:01","Coffee with Linda II - What's in the bag?"]
+	,["https://www.youtube.com/embed/SmoAsI2hYao","Day 53","05/07/2020","10:10","Neil Diamond Day"]
+	,["https://www.youtube.com/embed/vqFWRwUMZCE","Day 54","05/08/2020","00:01","Biscuit Day"]
+	,["https://www.youtube.com/embed/NG6Mdst3Ju4","Day 55","05/09/2020","00:01","A holiday spirit in May"]
+	,["https://www.youtube.com/embed/J5ejPh3BCUg","Day 56","05/10/2020","00:01","Piano Day<br>Little Richard R.I.P."]
+	,["https://www.youtube.com/embed/yHC8FPxTUxU","Day 57","05/11/2020","00:01",""]
+    
+// IN PROGRESS - SHOWING LOCALLY
     
 // AWAITING PROCESSING
-//	,["https://www.youtube.com/embed/","Day 51","05/05/2020","00:01","Day 51"]
-
 
 // NOT AVAILABLE IN YOUTUBE YET
-//	,["https://www.youtube.com/embed/","Day 52","05/06/2020","00:01","Day 52"]
-//	,["https://www.youtube.com/embed/","Day 53","05/07/2020","00:01","Day 53"]
-//	,["https://www.youtube.com/embed/","Day 54","05/08/2020","00:01","Buscuit Day"]
+//	,["https://www.youtube.com/embed/","Day 58","05/12/2020","00:01","Day 58"]
+
+// FUTURE PERFORMANCES
+//	,["https://www.youtube.com/embed/","Day 59","05/13/2020","00:01","Day 59"]
+//	,["https://www.youtube.com/embed/","Day 60","05/14/2020","00:01","Day 60"]
+//	,["https://www.youtube.com/embed/","Day 61","05/15/2020","00:01","Day 61"]
+//	,["https://www.youtube.com/embed/","Day 62","05/16/2020","00:01","Day 62"]
+//	,["https://www.youtube.com/embed/","Day 63","05/17/2020","00:01","Day 63"]
+//	,["https://www.youtube.com/embed/","Day 64","05/18/2020","00:01","Day 64"]
+//	,["https://www.youtube.com/embed/","Day 65","05/19/2020","00:01","Day 65"]
+//	,["https://www.youtube.com/embed/","Day 66","05/20/2020","00:01","Day 66"]
+//	,["https://www.youtube.com/embed/","Day 67","05/21/2020","00:01","Day 67"]
+//	,["https://www.youtube.com/embed/","Day 68","05/22/2020","00:01","Day 68"]
+//	,["https://www.youtube.com/embed/","Day 69","05/23/2020","00:01","Day 69"]
+//	,["https://www.youtube.com/embed/","Day 70","05/24/2020","00:01","Day 70"]
+//	,["https://www.youtube.com/embed/","Day 71","05/25/2020","00:01","Day 71"]
+//	,["https://www.youtube.com/embed/","Day 72","05/26/2020","00:01","Day 72"]
+//	,["https://www.youtube.com/embed/","Day 73","05/27/2020","00:01","Day 73"]
+//	,["https://www.youtube.com/embed/","Day 74","05/28/2020","00:01","Day 74"]
+//	,["https://www.youtube.com/embed/","Day 75","05/29/2020","00:01","Day 75"]
+//	,["https://www.youtube.com/embed/","Day 76","05/30/2020","00:01","Day 76"]
+//	,["https://www.youtube.com/embed/","Day 77","05/31/2020","00:01","Day 77"]
+//	,["https://www.youtube.com/embed/","Day 78","06/01/2020","00:01","Day 78"]
+//	,["https://www.youtube.com/embed/","Day 79","06/02/2020","00:01","Day 79"]
+//	,["https://www.youtube.com/embed/","Day 80","06/03/2020","00:01","Day 80"]
+//	,["https://www.youtube.com/embed/","Day 81","06/04/2020","00:01","Day 81"]
+//	,["https://www.youtube.com/embed/","Day 82","06/05/2020","00:01","Day 82"]
+//	,["https://www.youtube.com/embed/","Day 83","06/06/2020","00:01","Day 83"]
 ];
